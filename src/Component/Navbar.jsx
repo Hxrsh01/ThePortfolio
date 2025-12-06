@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Moon, Sun } from 'lucide-react'
 const Navbar = () => {
   const [open, setopen] = useState(false)
   return (
@@ -13,7 +13,11 @@ const Navbar = () => {
           <li>Home</li>
           <li>About</li>
           <li>Project</li>
-          <li><button>Contact</button></li>
+          <li>Contact</li>
+          <button className='relative w-10 h-5 bg-gray-400 rounded-full flex items-center p-1 cursor-pointer'>
+            <Moon />
+            <Sun />
+          </button>
         </ul>
         <div className='flex items-center sm:hidden'>
           <button onClick={() => setopen(!open)}
@@ -27,10 +31,10 @@ const Navbar = () => {
               <li>Home</li>
               <li>About</li>
               <li>Project</li>
-              <li><button>Contact</button></li>
+              <li>Contact</li>
             </ul>
           </div>
-          )}
+        )}
       </nav>
     </>
   )
